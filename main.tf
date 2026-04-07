@@ -1,4 +1,8 @@
 module "ec2" {
+  for_each =
   source = "./modules/ec2"
-  env    = "var.env"
+  env    = var.env
+  app_port = each.value["app_port"]
+  component_name = each.key
+  instance_type = each.value["instance_type"]
 }
