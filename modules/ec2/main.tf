@@ -44,6 +44,9 @@ resource "aws_instance" "instance" {
   }
 }
 
+#Terraform creates the SERVER. But the server is empty — no software installed.
+#Provisioner = "after creating server, run these commands on it"
+
 resource "null_resource" "ansible-pull" {
   provisioner "remote-exec" {
     connection {
