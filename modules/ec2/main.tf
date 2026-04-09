@@ -71,3 +71,11 @@ resource "null_resource" "ansible-pull" {
 #   EOL
 # }
 
+resource "aws_route53_record" "catalogue" {
+  zone_id = "var.zone_id"
+  name    = "${var.component_name}-${var.env}.${var.domain_name}"
+  type    = "A"
+  ttl     = "30"
+  records = [aws_instance.${var.component_name}.private_ip]
+}
+
