@@ -1,2 +1,19 @@
-Connect to the Server using SSH and Download the repo file
-curl -L -o /etc/yum.repos.d/vault.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+Connect to the Server using SSH and Download the repo file\
+
+- curl -L -o /etc/yum.repos.d/vault.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+
+- dnf install vault -y
+
+systemctl status vault
+
+systemctl start vault
+
+#To check the port
+
+- netstat -lntp
+
+#To check the Vault UI
+
+https://<ip>:<port>(8200)
+
+Inside the vault create a test under secrets engines test -> my_credentials -> User : Sairam Password: DevOps321
