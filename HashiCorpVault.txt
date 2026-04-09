@@ -1,0 +1,2 @@
+Connect to the Server using SSH and Download the repo file
+curl -L -o /etc/yum.repos.d/vault.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
