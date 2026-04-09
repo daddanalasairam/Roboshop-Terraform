@@ -1,6 +1,3 @@
-variable "env" {}
-variable "db_instances" {}
-variable "app_instances" {}
-variable "web_instances" {}
-variable "zone_id" {}
-variable "domain_name" {}
+variable "tool_name" {}
+variable "sg_port" {}
+variable "volume_size" {}
