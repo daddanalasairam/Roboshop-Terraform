@@ -71,7 +71,7 @@ resource "null_resource" "ansible-pull" {
 #   EOL
 # }
 
-resource "aws_route53_record" "catalogue" {
+resource "aws_route53_record" "record" {
   zone_id = "var.zone_id"
   name    = "${var.component_name}-${var.env}.${var.domain_name}"
   type    = "A"
