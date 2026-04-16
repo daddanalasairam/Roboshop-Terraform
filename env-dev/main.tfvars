@@ -1,6 +1,6 @@
 env="dev"
 domain_name = "sairamdevops.online"
-zone_id = "Z08535891FNQ7VOKD83G7"
+zone_id = "Z0178136JFDDY8ZV87TZ"
 
 db_instances = {
   mongodb = {
