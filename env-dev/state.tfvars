@@ -1,3 +1,3 @@
-bucket = "my-terraform-state-bucket"
-key    = "dev/terraform.tfstate"
-region = "us-west-2"
+bucket         = "sairam-roboshop"
+key            = "roboshop/dev/terraform.tfstate"
+region         = "us-east-1"
