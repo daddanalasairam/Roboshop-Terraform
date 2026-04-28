@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/null"
       version = "3.2.4"
     }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "6.17.0"
+    }
   }
 }
 resource "aws_security_group" "sg" {
