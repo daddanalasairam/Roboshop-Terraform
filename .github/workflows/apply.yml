@@ -3,15 +3,41 @@ name: learn-github-actions
 on: [workflow_dispatch]
 
 jobs:
-  just-ls-command:
+  terraform:
     runs-on: self-hosted
-
     steps:
-      - name: Print message
-        run: echo "Hello from GitHub Runner"
+      - uses: actions/checkout@v4
+      - run: |
+          make dev-apply token="$env:vault_token"
+        env:
+          vault_token: ${{ secrets.vault_token }}
 
-      - name: List files
-        run: ls -l
 
-      - name: Show hostname
-        run: hostname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  just-ls-command:
+#    runs-on: self-hosted
+#
+#    steps:
+#      - name: Print message
+#        run: echo "Hello from GitHub Runner"
+#
+#      - name: List files
+#        run: ls -l
+#
+#      - name: Show hostname
+#        run: hostname
