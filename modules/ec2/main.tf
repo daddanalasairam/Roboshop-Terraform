@@ -56,6 +56,11 @@ resource "aws_instance" "instance" {
 #remote-exec  =  Run commands ON the server (SSH into it)
 #local-exec   =  Run commands on YOUR machine (where terraform runs)
 resource "null_resource" "ansible-pull" {
+
+  triggers = {
+    instance_id = aws_instance.instance.id
+  }
+
   provisioner "remote-exec" {
     connection {
       type        = "ssh"
