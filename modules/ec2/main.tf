@@ -49,6 +49,11 @@ resource "aws_instance" "instance" {
   root_block_device {
     volume_size = var.volume_size
   }
+  lifecycle {
+    ignore_changes = [
+    ami,
+    ]
+  }
 }
 
 #Terraform creates the SERVER. But the server is empty — no software installed.
